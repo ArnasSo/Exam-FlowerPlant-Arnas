@@ -21,14 +21,19 @@
   margin-top: 10px;
 }
 
+.actions .editBtn {
+  background: lightgoldenrodyellow;
+}
+
+.actions .deleteBtn {
+  background: red;
+  color: white;
+}
+
 .actions button {
   padding: 8px 10px;
   border-radius: 12px;
   border: 1px solid rgba(15, 26, 20, 0.15);
-  background: white;
   cursor: pointer;
 }
 
-.actions button:hover {
-  background: rgba(46, 125, 50, 0.08);
-}

@@ -95,7 +95,7 @@ export default function MyPlants() {
             <header className={styles.header}>
                 <h1 className={styles.title}>My Plants</h1>
                 <p className={styles.subtitle}>
-                    Create your personal plant care guides. (Later: saved in localStorage.)
+                    Create your personal plant care guides.
                 </p>
             </header>
 

@@ -61,6 +61,7 @@ export default function PlantForm({ onAddPlant, onUpdatePlant, onCancelEdit, edi
                         value={formData.commonName}
                         onChange={handleChange}
                         type="text"
+                        required
                     />
                 </label>
 
@@ -72,6 +73,7 @@ export default function PlantForm({ onAddPlant, onUpdatePlant, onCancelEdit, edi
                         value={formData.scientificName}
                         onChange={handleChange}
                         type="text"
+                        required
                     />
                 </label>
             </div>
@@ -84,6 +86,7 @@ export default function PlantForm({ onAddPlant, onUpdatePlant, onCancelEdit, edi
                     value={formData.light}
                     onChange={handleChange}
                     type="text"
+                    required
                 />
             </label>
 
@@ -95,6 +98,7 @@ export default function PlantForm({ onAddPlant, onUpdatePlant, onCancelEdit, edi
                     value={formData.watering}
                     onChange={handleChange}
                     type="text"
+                    required
                 />
             </label>
 
@@ -106,6 +110,7 @@ export default function PlantForm({ onAddPlant, onUpdatePlant, onCancelEdit, edi
                     value={formData.soil}
                     onChange={handleChange}
                     type="text"
+                    required
                 />
             </label>
 
@@ -124,7 +129,9 @@ export default function PlantForm({ onAddPlant, onUpdatePlant, onCancelEdit, edi
             </label>
 
             <div className={styles.actions}>
-                <button className={styles.primary} type="submit">
+                <button className={
+                    editingPlant ? styles.updateBtn : styles.saveBtn
+                } type="submit">
                     {editingPlant ? "Update plant" : "Save plant"}
                 </button>
 

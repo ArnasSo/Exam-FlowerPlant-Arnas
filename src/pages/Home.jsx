@@ -23,6 +23,7 @@ export default function Home() {
                 <div className={styles.cardGrid}>
                     <div className={styles.card}>
                         <h3>Snake Plant</h3>
+                        <hr></hr>
                         <p><strong>Scientific:</strong> Sansevieria trifasciata</p>
                         <p><strong>Light:</strong> Low to bright indirect light</p>
                         <p><strong>Watering:</strong> Every 2-3 weeks</p>
@@ -32,6 +33,7 @@ export default function Home() {
 
                     <div className={styles.card}>
                         <h3>Spider Plant</h3>
+                        <hr></hr>
                         <p><strong>Scientific:</strong> Chlorophytum comosum</p>
                         <p><strong>Light:</strong> Bright, indirect sunlight</p>
                         <p><strong>Watering:</strong> Every 1-2 weeks</p>
@@ -41,6 +43,7 @@ export default function Home() {
 
                     <div className={styles.card}>
                         <h3>Fiddle-Leaf Fig</h3>
+                        <hr></hr>
                         <p><strong>Scientific:</strong> Ficus lyrata</p>
                         <p><strong>Light:</strong> Bright, indirect light (6+ hrs)</p>
                         <p><strong>Watering:</strong> When top 2-3 inches of soil are dry</p>

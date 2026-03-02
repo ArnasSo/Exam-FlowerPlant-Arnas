@@ -6,7 +6,7 @@ import styles from "./PlantCard.module.css";
 export default function PlantCard({ plant, onDeletePlant, onEditPlant }) {
   return (
     <article className={styles.card}>
-      <h3 className={styles.name}>{plant.commonName}</h3>
+      <h3 className={styles.name}>{plant.commonName}</h3><hr></hr>
       <p className={styles.meta}>{plant.scientificName}</p>
 
       <p>
@@ -24,10 +24,10 @@ export default function PlantCard({ plant, onDeletePlant, onEditPlant }) {
 
       <div className={styles.actions}>
         {/* i use id to determine which plant i am actually editing */}
-        <button type="button" onClick={() => onEditPlant(plant.id)}>
+        <button type="button" className={styles.editBtn} onClick={() => onEditPlant(plant.id)}>
           Edit
         </button>
-        <button type="button" onClick={() => onDeletePlant(plant.id)}>
+        <button type="button" className={styles.deleteBtn} onClick={() => onDeletePlant(plant.id)}>
           Delete
         </button>
       </div>
