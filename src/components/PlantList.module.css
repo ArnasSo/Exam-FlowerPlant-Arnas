@@ -1,0 +1,46 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(15, 26, 20, 0.08);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+.name {
+  margin: 0 0 4px 0;
+}
+
+.meta {
+  margin: 0 0 10px 0;
+  opacity: 0.75;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.actions button {
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 26, 20, 0.15);
+  background: white;
+  cursor: pointer;
+}
+
+.actions button:hover {
+  background: rgba(46, 125, 50, 0.08);
+}
+
+@media (max-width: 700px) {
+  .list {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,50 @@
+.header {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(15, 26, 20, 0.12);
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: 0.2px;
+}
+
+.nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.navLink {
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+
+.navLink:hover {
+  background: rgba(46, 125, 50, 0.10);
+  opacity: 1;
+}
+
+.navLink[aria-current="page"] {
+  background: rgba(46, 125, 50, 0.16);
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
