@@ -8,19 +8,18 @@ import Home from "./pages/Home";
 import MyPlants from "./pages/MyPlants";
 import About from "./pages/About";
 
-const router = createBrowserRouter(
-  [
-    {
-      path: "/",
-      element: <Layout />,
-      children: [
-        { index: true, element: <Home /> },
-        { path: "myplants", element: <MyPlants /> },
-        { path: "about", element: <About /> }
-      ],
-    },
-  ],
-);
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+    // using index to define the default child route
+      { index: true, element: <Home />},
+      { path: "myplants", element: <MyPlants />},
+      { path: "about", element: <About />}
+    ],
+  },
+]);
 
 export default function App() {
   return <RouterProvider router={router} />
