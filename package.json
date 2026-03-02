@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/ArnasSo/Exam-FlowerPlant-Arnas",
+  "homepage": "https://ArnasSo.github.io/Exam-FlowerPlant-Arnas",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
