@@ -27,7 +27,7 @@ export default function Footer() {
           </p>
         </div>
 
-        <p className={styles.copy}>2026 FlowerPlant</p>
+        <p className={styles.copy}>© 2026 FlowerPlant</p>
       </div>
     </footer>
   );

@@ -1,6 +1,36 @@
 import styles from "./Home.module.css";
 import heroJpg from "../assets/hero.jpg";
 
+const examplePlants = [
+    {
+        id: 1,
+        name: "Snake Plant",
+        scientific: "Sansevieria trifasciata",
+        light: "Low to bright indirect light",
+        watering: "Every 2-3 weeks",
+        soil: "Well-draining cactus or succulent mix",
+        level: "Beginner",
+    },
+    {
+        id: 2,
+        name: "Spider Plant",
+        scientific: "Chlorophytum comosum",
+        light: "Bright, indirect sunlight",
+        watering: "Every 1-2 weeks",
+        soil: "Well-draining potting mix",
+        level: "Intermediate",
+    },
+    {
+        id: 3,
+        name: "Fiddle-Leaf Fig",
+        scientific: "Ficus lyrata",
+        light: "Bright, indirect light (6+ hrs)",
+        watering: "When top 2-3 inches of soil are dry",
+        soil: "Well-draining, peat-based mix with perlite",
+        level: "Expert",
+    },
+];
+
 export default function Home() {
     return (
         <>
@@ -21,35 +51,45 @@ export default function Home() {
                 <h2 className={styles.sectionTitle}>Example Plant Care Guides</h2>
 
                 <div className={styles.cardGrid}>
-                    <div className={styles.card}>
-                        <h3>Snake Plant</h3>
-                        <hr></hr>
-                        <p><strong>Scientific:</strong> Sansevieria trifasciata</p>
-                        <p><strong>Light:</strong> Low to bright indirect light</p>
-                        <p><strong>Watering:</strong> Every 2-3 weeks</p>
-                        <p><strong>Soil:</strong> Well-draining cactus or succulent mix</p>
-                        <p><strong>Level:</strong> Beginner</p>
-                    </div>
+                    {examplePlants.map((plant) => (
+                        <div key={plant.id} className={styles.card}>
+                            <h3>🌱 {plant.name}</h3>
+                            <hr />
+                            <p><strong>Scientific:</strong> {plant.scientific}</p>
+                            <p><strong>☀️ Light:</strong> {plant.light}</p>
+                            <p><strong>💧 Watering:</strong> {plant.watering}</p>
+                            <p><strong>🌿 Soil:</strong> {plant.soil}</p>
+                            <p><strong>⭐ Level:</strong> {plant.level}</p>
+                        </div>
+                    ))}
+                </div>
+            </section>
 
-                    <div className={styles.card}>
-                        <h3>Spider Plant</h3>
-                        <hr></hr>
-                        <p><strong>Scientific:</strong> Chlorophytum comosum</p>
-                        <p><strong>Light:</strong> Bright, indirect sunlight</p>
-                        <p><strong>Watering:</strong> Every 1-2 weeks</p>
-                        <p><strong>Soil:</strong> Well-draining potting mix</p>
-                        <p><strong>Level:</strong> Intermediate</p>
-                    </div>
+            <section className={styles.section}>
+                <h2 className={styles.sectionTitle}>General Care Basics 🌿</h2>
 
-                    <div className={styles.card}>
-                        <h3>Fiddle-Leaf Fig</h3>
-                        <hr></hr>
-                        <p><strong>Scientific:</strong> Ficus lyrata</p>
-                        <p><strong>Light:</strong> Bright, indirect light (6+ hrs)</p>
-                        <p><strong>Watering:</strong> When top 2-3 inches of soil are dry</p>
-                        <p><strong>Soil:</strong> Well-draining, peat-based mix with perlite</p>
-                        <p><strong>Level:</strong> Expert</p>
-                    </div>
+                <div className={styles.basicsBox}>
+                    <ul className={styles.basicsList}>
+                        <li>
+                            💧 <strong>Watering:</strong> "1-2 times a week" does NOT mean
+                            drown it like it's entering the Olympics. Check the soil first.
+                        </li>
+
+                        <li>
+                            ☀️ <strong>Light:</strong> Bright indirect light means near a window —
+                            not sunbathing on the balcony at noon.
+                        </li>
+
+                        <li>
+                            🌱 <strong>Drainage:</strong> If your pot has no drainage hole,
+                            your plant is basically living in a bathtub.
+                        </li>
+
+                        <li>
+                            👀 <strong>Observation:</strong> Yellow leaves? Probably too much love.
+                            Crispy leaves? Probably too little.
+                        </li>
+                    </ul>
                 </div>
             </section>
         </>

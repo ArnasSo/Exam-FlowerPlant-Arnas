@@ -6,20 +6,20 @@ import styles from "./PlantCard.module.css";
 export default function PlantCard({ plant, onDeletePlant, onEditPlant }) {
   return (
     <article className={styles.card}>
-      <h3 className={styles.name}>{plant.commonName}</h3><hr></hr>
+      <h3 className={styles.name}>🌱 {plant.commonName}</h3><hr></hr>
       <p className={styles.meta}>{plant.scientificName}</p>
 
       <p>
-        <strong>Light:</strong> {plant.light}
+        <strong>☀️ Light:</strong> {plant.light}
       </p>
       <p>
-        <strong>Water:</strong> {plant.watering}
+        <strong>💧 Water:</strong> {plant.watering}
       </p>
       <p>
-        <strong>Soil:</strong> {plant.soil}
+        <strong>🌿 Soil:</strong> {plant.soil}
       </p>
       <p>
-        <strong>Level:</strong> {plant.difficulty}
+        <strong>⭐ Level:</strong> {plant.difficulty}
       </p>
 
       <div className={styles.actions}>
