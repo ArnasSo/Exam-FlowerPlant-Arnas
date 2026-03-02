@@ -20,9 +20,6 @@ const router = createBrowserRouter(
       ],
     },
   ],
-  {
-    basename: "/Exam-FlowerPlant-Arnas/"
-  }
 );
 
 export default function App() {
